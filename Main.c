@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-main()  {
-  
-
-}
+typedef struct _unit {
+  char * name;
+  float grams;
+} unit;
 
 unit units[] = {
   {"kilo",1.00}
@@ -11,4 +11,10 @@ unit units[] = {
   {"pound",500.0}
   {"ounce",28.3495231}
 };
+
+
   
+main()  {
+  
+
+}
