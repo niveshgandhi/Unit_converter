@@ -15,36 +15,32 @@ int main () {
   printf("Femi: b\n");
   printf("Foot; c\n");
   printf("Inch: d\n");
-  printf("Light year: e\n");
-  printf("Meter: f\n");
-  printf("Mile: g\n");
-  printf("Nano meter: h\n");
-  printf("Pace: i\n");
-  printf("Point: j\n");
-  printf("Yard: k\n");
-  printf("Mile meter: l\n");
-  printf("Centi meter: m\n");
-  printf(":\n");
-  printf(":\n");
   
+  scanf("%c&c&Lf",&fromUnit,&toUnit,&fromValue);
   
-}
-
-typedef struct _unit {
-  char * name;
-  float grams;
-} unit;
-
-unit units[] = {
-  {"kilo",1.00}
-  {"kilogram",1000.0}
-  {"pound",500.0}
-  {"ounce",28.3495231}
-};
-
-
+  switch(fromUnit) {
+    case 'a': meterValue = fromValue * 1.143; fUnit="ell"; break;
+    case 'b': mererValue = fromValue ; power = -15; fUnit="fm"; break;
+    case 'c': meterValue = fromValue * 0.3048; fUnit="ft"; break;
+    case 'd': meterValue = fromValue * 0.0254; fUnit="in"; break;
+      
+    default: printf("Invalid input"); exit(0);
+                 }
   
-main()  {
+  switch(toUnit) {
+    case 'a': toValue = meterValue/1.143; tUnit="ell"; break;
+    case 'b': toValue = meterValue; tUnit="fm"; break;
+    case 'c': toValue = meterValue/0.3048; tUnit="ft"; break;
+    case 'd': toValue = meterValue/0.0254; tUnit="in"; break;
+      
+    default: printf("Invalid input"); exit(0);
+                 }
   
-
-}
+  if(power == 0)
+      printf("%.4Lf %s = %.4Lf%s",fromValue,fUnit,toValue,tUnit);
+  else{
+    while(tovalue > 10
+         printf("%.4Lf %s = %.4Lf*10^%d%s",fromValue,fUnit,toValue,power,tUnit);
+      }
+          return 0;
+          }
